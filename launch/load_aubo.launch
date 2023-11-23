@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_model" />
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"  />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find aubo_description)/urdf/xacro/inc/aubo.xacro'
+    robot_model:=$(arg robot_model)
+    transmission_hw_interface:=$(arg transmission_hw_interface)"/>
+</launch>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="aubo_robot" params="aubo_type transmission_hw_interface">
+    <xacro:include filename="$(find aubo_description)/urdf/${aubo_type}.urdf.xacro" />
+    <joint name="ee_fixed_joint" type="fixed">
+      <parent link="wrist3_Link" />
+      <child link ="ee_link" />
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${pi/2.0}" />
+    </joint>
+
+    <link name="ee_link">
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="-0.01 0 0"/>
+      </collision>
+    </link>
+    
+    <transmission name="shoulder_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="shoulder_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="shoulder_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  
+    <transmission name="foreArm_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="foreArm_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="foreArm_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  
+    <transmission name="upperArm_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="upperArm_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="upperArm_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  
+    <transmission name="wrist1_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist1_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="wrist1_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  
+    <transmission name="wrist2_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist2_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="wrist2_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  
+    <transmission name="wrist3_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wrist3_joint">
+        <hardwareInterface>${transmission_hw_interface}</hardwareInterface>
+      </joint>
+      <actuator name="wrist3_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+    
+    <gazebo reference="shoulder_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="upperArm_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="foreArm_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="wrist1_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="wrist2_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="wrist3_Link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="ee_link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo>
+      <!-- plugin name="ros_control" filename="libgazebo_ros_control.so"/ -->
+    </gazebo>
+
+  </xacro:macro>
+</robot>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="aubo_robot">
+  <xacro:arg name="transmission_hw_interface" default=""/>
+  <xacro:arg name="robot_ip" default="None"/>
+    <xacro:property name="robot_ip" value="$(arg robot_ip)"/>
+  <xacro:arg name="aubo_type" default="None"/>
+    <xacro:property name="aubo_type" value="$(arg aubo_type)"/>
+  <xacro:arg name="use_fake_hardware" default="true"/>
+    <xacro:property name="use_fake_hardware" value="$(arg use_fake_hardware)"/>
+  <xacro:include filename="$(find aubo_description)/urdf/xacro/inc/aubo_ros2_macro.xacro"/>
+  <xacro:aubo_robot 
+    transmission_hw_interface="$(arg transmission_hw_interface)" 
+    aubo_type="${aubo_type}"/>
+  <!-- ros2_control -->
+  <xacro:include filename="$(find aubo_description)/urdf/xacro/inc/aubo.ros2_control.xacro" />
+  <xacro:aubo_ros2_control
+    name="auboHardwareInterface"
+    prefix=""
+    use_fake_hardware="${use_fake_hardware}"
+    robot_ip="${robot_ip}"/>
+</robot>

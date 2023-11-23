@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg robot_model)_robot">
+  <xacro:arg name="robot_model" default=""/>
+  <xacro:arg name="transmission_hw_interface" default=""/>
+  <xacro:include filename="$(find aubo_description)/urdf/xacro/inc/aubo_macro.xacro"/>
+  <xacro:aubo_robot 
+    robot_model="$(arg robot_model)"
+    transmission_hw_interface="$(arg transmission_hw_interface)" />
+</robot>
