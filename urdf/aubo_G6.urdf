@@ -101,7 +101,6 @@
       effort="133"
       start_stop="194"
       velocity="3.1415926535897932384626433832795" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="6.64" ratio="101"/>
   </joint>
   <link
     name="upperArm_Link">
@@ -161,7 +160,6 @@
       effort="133"
       start_stop="194"
       velocity="3.1415926535897932384626433832795" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="6.64" ratio="101"/>
   </joint>
   <link
     name="foreArm_Link">
@@ -221,7 +219,6 @@
       effort="61"
       start_stop="102"
       velocity="3.1415926535897932384626433832795" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="6.96" ratio="101"/>
   </joint>
   <link
     name="wrist1_Link">
@@ -281,7 +278,6 @@
       effort="49"
       start_stop="66"
       velocity="3.1415926535897932384626433832795" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="6.69" ratio="101"/>
   </joint>
   <link
     name="wrist2_Link">
@@ -341,7 +337,6 @@
       effort="13.5"
       start_stop="34"
       velocity="3.1415926535897932384626433832795"/>
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="7.24" ratio="101"/>
   </joint>
   <link
     name="wrist3_Link">
@@ -401,7 +396,6 @@
       effort="13.5"
       start_stop="34"
       velocity="3.1415926535897932384626433832795" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="7.24" ratio="101"/>
   </joint>
   
   <link name="world" />

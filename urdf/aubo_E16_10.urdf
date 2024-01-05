@@ -57,7 +57,6 @@
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="267" start_stop="411" velocity="3.1416" />
-    <property inertia="4.9" damping="0" stiffness="0" offset="0" motor_constant="8.75" ratio="101"/>
   </joint>
 
 
@@ -91,7 +90,6 @@
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="267" start_stop="411" velocity="3.1416" />
-    <property inertia="4.9" damping="0" stiffness="0" offset="0" motor_constant="8.75" ratio="101"/>
   </joint>
 
 
@@ -125,7 +123,6 @@
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="4.6600" />
-    <property inertia="2.0" damping="0" stiffness="0" offset="0" motor_constant="8.72" ratio="101"/>
   </joint>
 
 
@@ -159,7 +156,6 @@
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="49" start_stop="66" velocity="3.1416" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.81" ratio="101"/>
   </joint>
 
 
@@ -193,7 +189,6 @@
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="49" start_stop="66" velocity="3.1416" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.814" ratio="101"/>
   </joint>
 
 
@@ -227,7 +222,6 @@
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="49" start_stop="66" velocity="3.1416" />
-    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.814" ratio="101"/>
   </joint>
 
   <link name="world" />

@@ -55,7 +55,6 @@
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="204" velocity="2.5964" />
-    <property inertia="2.0" damping="0" stiffness="0" offset="0" motor_constant="7.05" ratio="101" protect_max_torque="80.0" equa_inertia="1.5" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="upperArm_Link">
@@ -87,7 +86,6 @@
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.5964" />
-    <property inertia="2.0" damping="0" stiffness="0" offset="0" motor_constant="7.05" ratio="101" protect_max_torque="80.0" equa_inertia="1.5" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="foreArm_Link">
@@ -119,7 +117,6 @@
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.5964" />
-    <property inertia="2.0" damping="0" stiffness="0" offset="0" motor_constant="7.05" ratio="101" protect_max_torque="60.0" equa_inertia="1.2" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="wrist1_Link">
@@ -151,7 +148,6 @@
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
-    <property inertia="0.15" damping="0" stiffness="0" offset="0" motor_constant="5.94" ratio="81" protect_max_torque="16.0" equa_inertia="0.05" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="wrist2_Link">
@@ -183,7 +179,6 @@
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
-    <property inertia="0.15" damping="0" stiffness="0" offset="0" motor_constant="5.94" ratio="81" protect_max_torque="16.0" equa_inertia="0.05" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="wrist3_Link">
@@ -215,7 +210,6 @@
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
-    <property inertia="0.15" damping="0" stiffness="0" offset="0" motor_constant="5.94" ratio="81" protect_max_torque="10.0" equa_inertia="0.01" collision_detection_para = "50 50 30 20"/>
   </joint>
 
   <link name="world" />

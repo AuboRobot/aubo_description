@@ -30,11 +30,14 @@ if(INSTALL_AUBO_DESCRIPTION)
     install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/meshes DESTINATION aubo_description/)
 endif()
 
-if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+if (DEFINED ENV{ROS_DISTRO})
     find_package(ros_environment REQUIRED)
     set(ROS_VERSION $ENV{ROS_VERSION})
+    message("ROS_VERSION" ${ROS_VERSION})
     if(${ROS_VERSION} EQUAL 1)
-    
+        
+    	execute_process(COMMAND bash ros1_xacro.sh
+    	                WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
     	find_package(catkin REQUIRED)
 
     	catkin_package()

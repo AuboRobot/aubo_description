@@ -54,7 +54,6 @@
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="100" start_stop="0" velocity="6.2832" />
-    <property inertia="0.0" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="upperArm_Link">
@@ -86,7 +85,6 @@
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.4" upper="2.4" effort="100" start_stop="0" velocity="3.1415926535897932384626433832795" />
-    <property inertia="0.0" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="foreArm_Link">
@@ -118,7 +116,6 @@
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.4" upper="2.4" effort="100" start_stop="0" velocity="3.1415926535897932384626433832795" />
-    <property inertia="0.0" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="wrist1_Link">
@@ -150,7 +147,6 @@
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="100" start_stop="0" velocity="6.283185307179586476925286766559" />
-    <property inertia="0.15" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="wrist2_Link">
@@ -182,7 +178,6 @@
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.4" upper="2.4" effort="10" start_stop="0" velocity="6.283185307179586476925286766559" />
-    <property inertia="0.0" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="wrist3_Link">
@@ -214,7 +209,6 @@
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="10" start_stop="0" velocity="6.283185307179586476925286766559" />
-    <property inertia="0.0" damping="0" stiffness="0" offset="0" motor_constant="1" ratio="1"/>
   </joint>
 
   <link name="world" />

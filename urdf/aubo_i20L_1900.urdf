@@ -54,7 +54,6 @@
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="557" start_stop="800" velocity="2.5962" />
-    <property inertia="9.5" damping="0" stiffness="0" offset="0" motor_constant="18.7" ratio="161"/>
   </joint>
 
   <link name="upperArm_Link">
@@ -86,7 +85,6 @@
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-3.054326190990076759616458844855" upper="3.054326190990076759616458844855" effort="557" start_stop="800" velocity="2.5962" />
-    <property inertia="9.5" damping="0" stiffness="0" offset="0" motor_constant="18.70" ratio="161"/>
   </joint>
 
   <link name="foreArm_Link">
@@ -118,7 +116,6 @@
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-3.054326190990076759616458844855" upper="3.054326190990076759616458844855" effort="267" start_stop="411" velocity="2.5962" />
-    <property inertia="4.9" damping="0" stiffness="0" offset="0" motor_constant="10.1" ratio="101"/>
   </joint>
 
   <link name="wrist1_Link">
@@ -150,7 +147,6 @@
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-3.054326190990076759616458844855" upper="3.054326190990076759616458844855" effort="49" start_stop="66" velocity="3.1102" />
-    <property inertia="0.39" damping="0" stiffness="0" offset="0" motor_constant="7.64" ratio="101"/>
   </joint>
 
   <link name="wrist2_Link">
@@ -182,7 +178,6 @@
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-3.054326190990076759616458844855" upper="3.054326190990076759616458844855" effort="49" start_stop="66" velocity="3.1102" />
-    <property inertia="0.39" damping="0" stiffness="0" offset="0" motor_constant="7.64" ratio="101"/>
   </joint>
 
   <link name="wrist3_Link">
@@ -214,7 +209,6 @@
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="49" start_stop="66" velocity="3.1102" />
-    <property inertia="0.39" damping="0" stiffness="0" offset="0" motor_constant="7.64" ratio="101"/>
   </joint>
 
   <link name="world" />
