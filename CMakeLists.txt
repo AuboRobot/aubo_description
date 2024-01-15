@@ -1,35 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(aubo_description)
 
-option(INSTALL_AUBO_DESCRIPTION "INSTALL_AUBO_DESCRIPTION" ON) 
-add_custom_target(aubo_description DEPENDS
-    config/aubo_i5.conf
-    config/joint_M60B_h402.conf)
-add_custom_command(TARGET aubo_description
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/aubo_description)
-add_custom_command(TARGET aubo_description
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_CURRENT_SOURCE_DIR}/config
-        ${CMAKE_BINARY_DIR}/aubo_description/config)
-add_custom_command(TARGET aubo_description
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_CURRENT_SOURCE_DIR}/urdf
-        ${CMAKE_BINARY_DIR}/aubo_description/urdf)
-add_custom_command(TARGET aubo_description
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_CURRENT_SOURCE_DIR}/meshes
-        ${CMAKE_BINARY_DIR}/aubo_description/meshes)
-
-if(INSTALL_AUBO_DESCRIPTION)
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/config DESTINATION aubo_description/)
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/urdf DESTINATION aubo_description/)
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/meshes DESTINATION aubo_description/)
-endif()
-
 if (DEFINED ENV{ROS_DISTRO})
     find_package(ros_environment REQUIRED)
     set(ROS_VERSION $ENV{ROS_VERSION})
