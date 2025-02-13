@@ -4,9 +4,9 @@
   <safety_para singularity_consistent="0.02 0.01 10 0.2 0.045 10"/>
   <link name="base_link">
     <inertial>
-      <origin xyz="-0.0002 0.0045 0.0193" rpy="0 0 0" />
-      <mass value="1.0247" />
-      <inertia ixx="0.0035" ixy="0.0000" ixz="0.0000" iyy="0.003" iyz="0.0001" izz="0.0061" />
+      <origin xyz="0.000136 0.001601 0.018986" rpy="0 0 0" />
+      <mass value="2.592000" />
+      <inertia ixx="0.008524" ixy="-0.000001" ixz="-0.000005" iyy="0.007934" iyz="-0.000081" izz="0.015304" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -28,9 +28,9 @@
 
   <link name="shoulder_Link">
     <inertial>
-      <origin xyz="0.0000 0.0042 -0.0278" rpy="0 0 0" />
-      <mass value="11.1649" />
-      <inertia ixx="0.0511" ixy="0.0000" ixz="0.0000" iyy="0.0498" iyz="0.0002" izz="0.0311" />
+      <origin xyz="-0.000004 0.005112 -0.026275" rpy="0 0 0" />
+      <mass value="10.180139" />
+      <inertia ixx="0.043326" ixy="0.000003" ixz="0.000003" iyy="0.042233" iyz="-0.001767" izz="0.029902" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -57,14 +57,15 @@
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="267" start_stop="411" velocity="3.106686068549906" />
+    <property inertia="4.9" damping="0" stiffness="0" offset="0" motor_constant="8.75" ratio="101"/>
   </joint>
 
 
   <link name="upperArm_Link">
     <inertial>
-      <origin xyz="0.1664 0.0000 -0.0142" rpy="0 0 0" />
-      <mass value="18.7946" />
-      <inertia ixx="0.0657" ixy="0.0000" ixz="-0.0149" iyy="1.4279" iyz="0.0000" izz="1.4077" />
+      <origin xyz="0.170602 0.000000 -0.013024" rpy="0 0 0" />
+      <mass value="17.664060" />
+      <inertia ixx="0.063521" ixy="0.000020" ixz="-0.024888" iyy="0.847528" iyz="0.000005" izz="0.828847" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -90,14 +91,15 @@
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="267" start_stop="411" velocity="3.106686068549906" />
+    <property inertia="4.9" damping="0" stiffness="0" offset="0" motor_constant="8.75" ratio="101"/>
   </joint>
 
 
   <link name="foreArm_Link">
     <inertial>
-      <origin xyz="0.282 0.0000 0.1059" rpy="0 0 0" />
-      <mass value="3.9474" />
-      <inertia ixx="0.05" ixy="0.0000" ixz="0.1161" iyy="0.4363" iyz="0.0000" izz="0.3908" />
+      <origin xyz="0.269208 -0.000022 0.106467" rpy="0 0 0" />
+      <mass value="3.926354" />
+      <inertia ixx="0.006007" ixy="0.000009" ixz="0.001991" iyy="0.083780" iyz="0.000005" izz="0.082433" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -123,14 +125,15 @@
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="133" start_stop="207" velocity="4.660029102824860" />
+    <property inertia="2.0" damping="0" stiffness="0" offset="0" motor_constant="8.72" ratio="101"/>
   </joint>
 
 
   <link name="wrist1_Link">
     <inertial>
-      <origin xyz="0.0000 0.0155 -0.0013" rpy="0 0 0" />
-      <mass value="2.5692" />
-      <inertia ixx="0.0042" ixy="0.0000" ixz="0.0000" iyy="0.0022" iyz="0.0000" izz="0.0041" />
+      <origin xyz="0.000036 0.015610 -0.001526" rpy="0 0 0" />
+      <mass value="2.370741" />
+      <inertia ixx="0.003672" ixy="0.000006" ixz="-0.000001" iyy="0.002190" iyz="-0.000080" izz="0.003621" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -156,14 +159,15 @@
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="49" start_stop="66" velocity="4.136430327226561" />
+    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.81" ratio="101"/>
   </joint>
 
 
   <link name="wrist2_Link">
     <inertial>
-      <origin xyz="0.0000 -0.0155 -0.0013" rpy="0 0 0" />
-      <mass value="2.5692" />
-      <inertia ixx="0.0042" ixy="0.0000" ixz="0.0000" iyy="0.0022" iyz="0.0000" izz="0.0041" />
+      <origin xyz="-0.000036 -0.015610 -0.001526" rpy="0 0 0" />
+      <mass value="2.370741" />
+      <inertia ixx="0.003672" ixy="0.000006" ixz="0.000001" iyy="0.002190" iyz="0.000080" izz="0.003621" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -189,14 +193,15 @@
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="49" start_stop="66" velocity="4.136430327226561" />
+    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.814" ratio="101"/>
   </joint>
 
 
   <link name="wrist3_Link">
     <inertial>
-      <origin xyz="0.0000 -0.0004 -0.017" rpy="0 0 0" />
-      <mass value="0.203" />
-      <inertia ixx="0.0042" ixy="0.0000" ixz="0.0000" iyy="0.0002" iyz="0.0000" izz="0.0002" />
+      <origin xyz="0.000508 0.000344 -0.017049" rpy="0 0 0" />
+      <mass value="0.259654" />
+      <inertia ixx="0.000162" ixy="-0.000000" ixz="-0.000000" iyy="0.000160" iyz="0.000001" izz="0.000273" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -222,6 +227,7 @@
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
     <limit lower="-6.283185307179586" upper="6.283185307179586" effort="49" start_stop="66" velocity="4.136430327226561" />
+    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="8.814" ratio="101"/>
   </joint>
 
   <link name="world" />

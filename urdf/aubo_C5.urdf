@@ -2,6 +2,7 @@
 <robot name="aubo_C5">
   <dh_type type="modified"/>
   <safety_para singularity_consistent="0.02 0.01 10 0.2 0.045 10"/>
+  <render_settings ambient_light_color="0xffffff" ambient_light_intensity="0.7" directional_light_color="0xffffff" directional_light_intensity="0.3"/>
   <friction_coeff value="0.65"/>
   <link name="base_link">
     <inertial>
@@ -54,7 +55,8 @@
     <parent link="base_link" />
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.5964" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.565634" />
+    <property inertia="2.027236783" damping="0" stiffness="0" offset="0" motor_constant="8.73" ratio="121" protect_max_torque="80.0" equa_inertia="1.5" />
   </joint>
 
   <link name="upperArm_Link">
@@ -85,7 +87,8 @@
     <parent link="shoulder_Link" />
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.5964" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.565634" />
+    <property inertia="2.027236783" damping="0" stiffness="0" offset="0" motor_constant="8.73" ratio="121" protect_max_torque="80.0" equa_inertia="1.5" />
   </joint>
 
   <link name="foreArm_Link">
@@ -116,7 +119,8 @@
     <parent link="upperArm_Link" />
     <child link="foreArm_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.5964" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="133" start_stop="207" velocity="2.565634" />
+    <property inertia="2.027236783" damping="0" stiffness="0" offset="0" motor_constant="8.73" ratio="121" protect_max_torque="60.0" equa_inertia="1.2" />
   </joint>
 
   <link name="wrist1_Link">
@@ -147,7 +151,8 @@
     <parent link="foreArm_Link" />
     <child link="wrist1_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.106686" />
+    <property inertia="0.219280696" damping="0" stiffness="0" offset="0" motor_constant="7.27" ratio="101" protect_max_torque="16.0" equa_inertia="0.05" />
   </joint>
 
   <link name="wrist2_Link">
@@ -178,7 +183,8 @@
     <parent link="wrist1_Link" />
     <child link="wrist2_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.106686" />
+    <property inertia="0.219280696" damping="0" stiffness="0" offset="0" motor_constant="7.27" ratio="101" protect_max_torque="16.0" equa_inertia="0.05" />
   </joint>
 
   <link name="wrist3_Link">
@@ -209,7 +215,8 @@
     <parent link="wrist2_Link" />
     <child link="wrist3_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.1105" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="13.5" start_stop="34" velocity="3.106686" />
+    <property inertia="0.219280696" damping="0" stiffness="0" offset="0" motor_constant="7.27" ratio="101" protect_max_torque="10.0" equa_inertia="0.01" />
   </joint>
 
   <link name="world" />
