@@ -53,7 +53,7 @@
     <parent link="base_link" />
     <child link="shoulder_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="370" start_stop="1147" velocity="1.6249" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="809" start_stop="1147" velocity="1.6249" />
     <property inertia="9.5" damping="0" stiffness="0" offset="0" motor_constant="16.66" ratio="161"/>
   </joint>
 
@@ -85,7 +85,7 @@
     <parent link="shoulder_Link" />
     <child link="upperArm_Link" />
     <axis xyz="0 0 1" />
-    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="370" start_stop="1147" velocity="1.6249" />
+    <limit lower="-6.283185307179586476925286766559" upper="6.283185307179586476925286766559" effort="809" start_stop="1147" velocity="1.6249" />
     <property inertia="9.5" damping="0" stiffness="0" offset="0" motor_constant="16.66" ratio="161"/>
   </joint>
 
