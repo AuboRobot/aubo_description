@@ -186,7 +186,7 @@
         <mesh filename="package://aubo_description/meshes/aubo_i5L/visual/link6.DAE"/>
       </geometry>
       <material name="black">
-        <color rgba="0.25098 0.25098 0.25098"/>
+        <color rgba="0.25098 0.25098 0.25098 1"/>
       </material>
     </visual>
     <collision>

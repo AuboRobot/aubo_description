@@ -1,0 +1,65 @@
+stages:
+  - lint
+  - md2pdf
+  # - upload
+
+before_script:
+  - export LANG=en_US.UTF-8
+  - export TARGET="${SOURCES} CONTRIBUTING.md"
+  - export DSTZIP='templates public'
+  - export FILENAME=机器人新型号导入_$(date "+%Y%m%d-%H-%M" )
+  - export DINGPARENTID=92252759245
+  - export DINGUNIONID=8CTyWY8D4VugOCpxDDNuiSAiEiE
+
+validtoml:
+  stage: lint
+  image: ${BASEIMAGE_REGISTRY}validtoml:latest
+  script:
+    - find config/* -name "*.conf" -exec validtoml {} \;
+  artifacts:  
+    expire_in: 1 day
+    paths:
+      - public
+  tags: 
+    - kubernetes-linux-runner
+
+md2pdf:
+  stage: md2pdf
+  image: ${BASEIMAGE_REGISTRY}lwabish/mdout:chinese
+  script:
+    - mkdir public
+    # - mv docs/pics ./
+    # - for f in $TARGET; do ext=${f##*.} && echo "Processing ${f}" && md2pdf ${f} public/$(basename ${f/.$ext/.pdf}); done
+    - for f in $TARGET; do ext=${f##*.} && echo "Processing ${f}" && mdout ${f} -t pdf -e github -r landscape --out public/$(head -n 1 $f|tr -d '\# \n').pdf; done
+  when: on_success
+  artifacts:  
+    expire_in: 1 day
+    paths:
+      - public
+  tags: 
+    - kubernetes-linux-runner
+  only:
+    refs:
+      - master
+
+# upload-dingdisk:
+#   stage: upload
+#   image: ${BASEIMAGE_REGISTRY}dingdisk-client:latest
+#   script:
+#     - mkdir -p ${FILENAME}/说明
+#     - mkdir -p ${FILENAME}/模板
+#     - mv templates/*.xlsx ${FILENAME}/模板
+#     - mv public/*.pdf ${FILENAME}/说明
+#     # - for d in $DSTZIP;do mv ${d}/* /file ;done
+#     - mv ${FILENAME}/说明/如何导入一个新的机器人型号.pdf ${FILENAME}/
+#     - zip -q -r ${FILENAME}.zip ${FILENAME}
+#     - dingdisk-client upload -f ./${FILENAME}.zip -k ${DINGAPPKEY} -s ${DINGAPPSECRET} -u ${DINGUNIONID} -p ${DINGPARENTID}
+#   when: on_success
+#   artifacts:
+#     expire_in: 1 day
+#   tags: 
+#     - kubernetes-linux-runner
+#   only:
+#     refs:
+#       - master
+      

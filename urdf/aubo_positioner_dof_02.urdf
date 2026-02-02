@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<robot  name="aubo_positioner_dof_02">
+  <dh_type type="modified"/>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="rotation_axis_Link01">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="motion_joint01" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rotation_axis_Link01" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" start_stop="0" velocity="0" />
+    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="0" ratio="0"/>
+  </joint>
+  
+  <link name="rotation_axis_Link02">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file_path" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="motion_joint02" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="rotation_axis_Link01" />
+    <child link="rotation_axis_Link02" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0" effort="0" start_stop="0" velocity="0" />
+    <property inertia="0" damping="0" stiffness="0" offset="0" motor_constant="0" ratio="0"/>
+  </joint>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>

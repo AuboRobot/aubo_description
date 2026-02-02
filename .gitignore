@@ -1,0 +1,53 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# eclipse
+.cproject
+.project
+
+# build
+devel/
+debug/
+build/
+tmp/
+Makefile/
+
+deprecated/
+# temp files
+*~
+*.user*
+*.pro.user
+*.pro.user.*
+*.autosave
+
+addons/
+.dep/
+simulation/
+dependants/
+
+*.toml
+generate_kin.sh
+generate_kin_lib.sh
+kin/
+

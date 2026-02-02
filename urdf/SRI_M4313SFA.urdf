@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<link name="sensor_link">
+  <inertial>
+    <origin xyz="0.0 0.000805 0.021214" rpy="0 0 0" />
+    <mass value="0.450073" />
+    <inertia ixx="0.000233" ixy="0.00000000" ixz="0.000000" iyy="0.000218" iyz="0.000000" izz="0.000316" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://aubo_description/meshes/XJC_D75/visual/link0.3ds" />
+    </geometry>
+    <material name="">
+      <color rgba="1 1 1 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://aubo_description/meshes/SRI_M4313SFA/collision/link0.STL" />
+    </geometry>
+  </collision>
+  <sensor>
+    <origin xyz="0 0 0.00" rpy="0 0 0" />
+  </sensor>
+</link>
+
